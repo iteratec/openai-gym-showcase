@@ -1,24 +1,31 @@
+import re
 from gym import envs
 
 
-def print_spec(spec):
-    print('{} ({})'.format(spec.id, spec._entry_point))
+def extract_name(spec):
+    name = spec.id.split('-')[0]
+    name = re.sub('Deterministic$', '', name)
+    name = re.sub('NoFrameskip$', '', name)
+
+    return name
 
 
 if __name__ == "__main__":
-    specs = {}
-    for spec in envs.registry.all():
-        if spec not in specs:
-            specs[spec._env_name] = spec
-
     groups = {}
-    for spec in specs.values():
-        group = spec._entry_point.split(':')[0]
+    for spec in envs.registry.all():
+        group, env_name = spec._entry_point.split(':')
         if group not in groups:
-            groups[group] = []
-        groups[group].append(spec.id)
+            groups[group] = {}
 
-    for (key, spec_ids) in groups.items():
-        print(key)
-        for spec_id in spec_ids:
-            print(' ', spec_id)
+        name = extract_name(spec)
+        if name not in groups[group]:
+            groups[group][name] = []
+
+        groups[group][name].append(spec)
+
+    for (group, spec_data) in groups.items():
+        print(group)
+        for (name, specs) in spec_data.items():
+            print(' ', name)
+            for spec in specs:
+                print('   ', spec.id)

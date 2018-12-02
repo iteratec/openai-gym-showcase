@@ -37,6 +37,10 @@ def random_steps(env):
 
 if __name__ == "__main__":
     env = gym.make('CartPole-v1')
+    spec = env.unwrapped.spec
+    if spec.nondeterministic:
+        raise RuntimeError('Env is nondeterministic even after setting a seed - this policy wont work.')
+
     best_actions = policy_best_random_steps(env)
 
     reset(env)
