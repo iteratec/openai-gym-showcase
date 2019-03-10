@@ -51,13 +51,10 @@ gym.envs.toy_text
     NChain-v0
   Roulette
     Roulette-v0
-gym.envs.toy_text.taxi
   Taxi
     Taxi-v2
-gym.envs.toy_text.guessing_game
   GuessingGame
     GuessingGame-v0
-gym.envs.toy_text.hotter_colder
   HotterColder
     HotterColder-v0
 gym.envs.mujoco
@@ -87,6 +84,24 @@ gym.envs.mujoco
     Humanoid-v2
   HumanoidStandup
     HumanoidStandup-v2
+gym.envs.mujoco.half_cheetah_v3
+  HalfCheetah
+    HalfCheetah-v3
+gym.envs.mujoco.hopper_v3
+  Hopper
+    Hopper-v3
+gym.envs.mujoco.swimmer_v3
+  Swimmer
+    Swimmer-v3
+gym.envs.mujoco.walker2d_v3
+  Walker2d
+    Walker2d-v3
+gym.envs.mujoco.ant_v3
+  Ant
+    Ant-v3
+gym.envs.mujoco.humanoid_v3
+  Humanoid
+    Humanoid-v3
 gym.envs.robotics
   FetchSlide
     FetchSlide-v1
@@ -108,18 +123,24 @@ gym.envs.robotics
     HandManipulateBlockFull-v0
   HandManipulateBlock
     HandManipulateBlock-v0
+  HandManipulateBlockTouchSensors
+    HandManipulateBlockTouchSensors-v0
   HandManipulateEggRotate
     HandManipulateEggRotate-v0
   HandManipulateEggFull
     HandManipulateEggFull-v0
   HandManipulateEgg
     HandManipulateEgg-v0
+  HandManipulateEggTouchSensors
+    HandManipulateEggTouchSensors-v0
   HandManipulatePenRotate
     HandManipulatePenRotate-v0
   HandManipulatePenFull
     HandManipulatePenFull-v0
   HandManipulatePen
     HandManipulatePen-v0
+  HandManipulatePenTouchSensors
+    HandManipulatePenTouchSensors-v0
   FetchSlideDense
     FetchSlideDense-v1
   FetchPickAndPlaceDense
@@ -140,19 +161,38 @@ gym.envs.robotics
     HandManipulateBlockFullDense-v0
   HandManipulateBlockDense
     HandManipulateBlockDense-v0
+  HandManipulateBlockTouchSensorsDense
+    HandManipulateBlockTouchSensorsDense-v0
   HandManipulateEggRotateDense
     HandManipulateEggRotateDense-v0
   HandManipulateEggFullDense
     HandManipulateEggFullDense-v0
   HandManipulateEggDense
     HandManipulateEggDense-v0
+  HandManipulateEggTouchSensorsDense
+    HandManipulateEggTouchSensorsDense-v0
   HandManipulatePenRotateDense
     HandManipulatePenRotateDense-v0
   HandManipulatePenFullDense
     HandManipulatePenFullDense-v0
   HandManipulatePenDense
     HandManipulatePenDense-v0
+  HandManipulatePenTouchSensorsDense
+    HandManipulatePenTouchSensorsDense-v0
 gym.envs.atari
+  Adventure
+    Adventure-v0
+    Adventure-v4
+    AdventureDeterministic-v0
+    AdventureDeterministic-v4
+    AdventureNoFrameskip-v0
+    AdventureNoFrameskip-v4
+    Adventure-ram-v0
+    Adventure-ram-v4
+    Adventure-ramDeterministic-v0
+    Adventure-ramDeterministic-v4
+    Adventure-ramNoFrameskip-v0
+    Adventure-ramNoFrameskip-v4
   AirRaid
     AirRaid-v0
     AirRaid-v4
@@ -387,6 +427,19 @@ gym.envs.atari
     CrazyClimber-ramDeterministic-v4
     CrazyClimber-ramNoFrameskip-v0
     CrazyClimber-ramNoFrameskip-v4
+  Defender
+    Defender-v0
+    Defender-v4
+    DefenderDeterministic-v0
+    DefenderDeterministic-v4
+    DefenderNoFrameskip-v0
+    DefenderNoFrameskip-v4
+    Defender-ram-v0
+    Defender-ram-v4
+    Defender-ramDeterministic-v0
+    Defender-ramDeterministic-v4
+    Defender-ramNoFrameskip-v0
+    Defender-ramNoFrameskip-v4
   DemonAttack
     DemonAttack-v0
     DemonAttack-v4
